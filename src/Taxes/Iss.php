@@ -4,9 +4,9 @@ namespace Arquitechture\DesignPattern\Taxes;
 
 use Arquitechture\DesignPattern\Budget;
 
-class Iss implements Tax
+class Iss extends Tax
 {
-    public function calculateTax(Budget $budget): float
+    public function doSpecificCalc(Budget $budget): float
     {
         return $budget->value . 0.06;
     }

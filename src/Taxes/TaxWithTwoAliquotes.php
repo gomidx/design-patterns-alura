@@ -4,9 +4,9 @@ namespace Arquitechture\DesignPattern\Taxes;
 
 use Arquitechture\DesignPattern\Budget;
 
-abstract class TaxWithTwoAliquotes implements Tax
+abstract class TaxWithTwoAliquotes extends Tax
 {
-    public function calculateTax(Budget $budget): float
+    public function doSpecificCalc(Budget $budget): float
     {
         if ($this->shoudApplyMaxTax($budget)) {
             return $this->applyMaxTax($budget);
