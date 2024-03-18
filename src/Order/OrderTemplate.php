@@ -1,10 +1,10 @@
 <?php
 
-namespace Arquitechture\DesignPattern;
+namespace Arquitechture\DesignPattern\Order;
 
 use DateTimeInterface;
 
-class OrderExtrinsicData
+class OrderTemplate
 {
     public function __construct(
         private string $customerName,
