@@ -2,11 +2,8 @@
 
 namespace Arquitechture\DesignPattern;
 
-use DateTimeInterface;
-
 class Order
 {
-    public string $customerName;
-    public DateTimeInterface $finalizationDate;
+    public OrderExtrinsicData $data;
     public Budget $budget;
 }
