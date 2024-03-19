@@ -3,6 +3,7 @@
 namespace Arquitechture\DesignPattern\Nfe;
 
 use Arquitechture\DesignPattern\BudgetItem;
+use DateTimeImmutable;
 use DateTimeInterface;
 
 class Nfe
@@ -14,7 +15,7 @@ class Nfe
     public DateTimeInterface $emissionDate;
     public float $taxValue;
 
-    public function value()
+    public function value(): float
     {
         return array_reduce(
             $this->items,
@@ -23,5 +24,10 @@ class Nfe
             },
             0
         );
+    }
+
+    public function __clone()
+    {
+        $this->emissionDate = new DateTimeImmutable();
     }
 }
