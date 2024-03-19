@@ -3,12 +3,7 @@
 namespace Arquitechture\DesignPattern;
 
 use Arquitechture\DesignPattern\Actions\ActionAfterOrderGeneration;
-use Arquitechture\DesignPattern\Actions\CreateOrderInDB;
-use Arquitechture\DesignPattern\Actions\CreateOrderLog;
-use Arquitechture\DesignPattern\Actions\SendEmailOrder;
 use DateTimeImmutable;
-use SplObserver;
-use SplSubject;
 
 class GenerateOrderHandler
 {
